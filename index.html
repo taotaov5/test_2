@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/step.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/pic_tab.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<style>
+		
+	 	.header{
+	 		width: 1885px;
+	 		height: 30px;
+	 		background-color: #2E3A4B;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	#Qualifications{
+	 		height: 50px;
+	 		width: 1885px;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	#menu{
+	 		height: 30px;
+	 		width: 1885px;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	.Mainpicture{
+	 		height: 400px;
+	 		width: 1885px;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	#Friendshiplinks{
+	 		height: 80px;
+	 		width:1885px;
+			border-top:1px solid #E5E5E5;
+			background-color:#F5F5F5;
+	 	}
+	 	#bottomQualifications{
+	 		height: 100px;
+	 		width: 1885px;
+			background-color:#F5F5F5;
+	 	}
+	 	#bottommenu{
+	 		height: 350px;
+	 		width: 1885px;
+			
+			background-color:#F5F5F5;
+	 	}
+		#bottomAuthentication{
+			height: 140px;
+	 		width: 1885px;
+			
+			border-top:1px solid #E5E5E5;
+			background-color:#F5F5F5;
+		}
+	 	#bottom{
+	 		height: 300px;
+	 		width: 1885px;
+			background-color:#F5F5F5;
+			border-top:1px solid #E5E5E5;
+	 	}
+	 	.header_leftdiv{
+	 		float: left;
+	 		position: relative;
+	 		margin-left: 3px;
+	 		font-size: 10px;
+	 		color: white;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	.header_rightdiv{
+	 		float: left;
+	 		position: relative;
+	 		margin-left: 3px;
+	 		font-size: 10px;
+	 		color: white;
+	 		border: solid 0px;
+	 		border-color: red;
+	 	}
+	 	.drop-down{
+	 		float: left;
+	 		margin-left: 40px;
+	 		font-size: 20px;
+	 	}
+	 	.dorp{
+	 		position: relative;
+	 		display: inline-block;
+	 		font-size: 20px;
+	 		width: 150px;
+	 		height: 30px;
+	 		text-align:center;
+	 		line-height: 30px;
+	 		margin-left: -5px;
+	 		cursor:pointer;
+	 	}
+
+		#Mainmenu{
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			padding: 12px 16px;
+			background-color:rgba(255,255,255,0.15);
+			font-size: 12px;
+			color: white;
+			text-align: left;
+			width: 170px;
+			border-style: ;
+			border-color: ;
+			font-weight:bold;
+			height: 363px;
+			cursor:pointer;
+			
+
+		}
+
+		.dorp:hover #Mainmenu{
+			display:block;
+			
+		}
+		.dorp:hover{
+			background-color:#34B3E0;
+			color:white
+		}
+		
+		.Submenu{
+			border-style: solid;
+			border-bottom: 2px solid  rgba(200,200,200,0.15); 
+			border-width: 0 0 3px 0;
+			float: left;
+			width: 200px;
+			line-height: 40px;
+			position: relative;
+			padding-top: 20px;
+			border-width: 1 0 1px 0;
+			height: 55px;
+		}
+		#Submenubox{
+			position: relative;
+			margin: -20px 0px 0px -15px;
+		}
+		#Mainpicturebox{
+			margin: 60px 0px 0px 380px;
+			
+		}
+		.service{
+			border: solid 0px;
+			position: relative;
+			float: left;
+			margin-left: 15px;
+			width: 200px;
+			height: 250px;
+			background-color: white;
+			
+		}
+		.servicecontent{
+			
+		}
+		.servicecontent_cion{
+			border: solid 0px;
+			margin-top: 20px;
+			width: 80px;
+			height: 80px;
+			position: relative;
+			left: 60px;
+			border-radius:100px;
+			background-color: #F5F5F5;
+		}
+		.servicecontent_title{
+			border: solid 0px;
+			margin-top: 20px;
+			width: 100px;
+			height: 30px;
+			position: relative;
+			left: 50px;
+			top:-20px;
+			text-align: center;
+			line-height:30px;
+		}
+		.servicecontent_describe{
+			border: solid 0px;
+			margin-top: 20px;
+			width: 150px;
+			height: 30px;
+			position: relative;
+			left: 25px;
+			top:-40px;
+			font-size: 10px;
+			text-align: center;
+			color:#BBBBBB;
+			line-height:30px;
+		}
+		.servicecontent_button{
+			border: solid 1px;
+			margin-top: 20px;
+			width: 100px;
+			height: 30px;
+			position: relative;
+			left: 50px;
+			top:-50px;
+			text-align: center;
+			color:white;
+			line-height:30px;
+			background-color: #FD5A66;
+			cursor:pointer;
+		}
+		.servicecontent_number{
+			font-size:5px;
+			border: solid 0px;
+			margin-top: 20px;
+			width: 150px;
+			height: 20px;
+			position: relative;
+			left:22px;
+			top:-67px
+		}
+		#Industryinformationbox{
+			position: relative;
+			margin: 50px 0px 0px 380px;
+		}
+		.Industryinformation{
+			border: solid 1px;
+			border-color:#F0F0F0;
+			position: relative;
+			float: left;
+			margin-left: 15px;
+			width: 254.5px;
+			height: 280px;
+		}
+		.Industryinformation_cion{
+			border: solid 0px;
+			position: relative;
+			width: 254.5px;
+			height: 200px;
+		}
+		.Industryinformation_title{
+			border: solid 0px;
+			position: relative;
+			height: 30px;
+			top: 5px;
+		}
+		.Industryinformation_datecion{
+			border: solid 0px;
+			position: relative;
+			height: 20px;
+			width: 20px;
+			top: 15px;
+			left: 20px;
+		}
+		.Industryinformation_date{
+			border: solid 0px;
+			position: relative;
+			height: 20px;
+			width: 80px;
+			top: -7px;
+			left: 41px;
+		}
+		.Industryinformation_more{
+			border: solid 1px;
+			border-color:#F0F0F0;
+			position: relative;
+			height: 20px;
+			width: 50px;
+			top: -28px;
+			left: 190px;
+			font-align:center;
+		}
+		#min_pic{
+			border: solid 0px;
+			position: relative;
+			height: 300px;
+		}
+		.3ban_div{
+			border: solid 0px;
+			position: relative;
+			height: 300px;
+		}
+		.Customersatisfaction{
+			background-image:url(img/work.jpg);
+			border: solid 1px;
+			position: relative;
+			float:left;
+			margin-left:10px;
+			width:20%;
+			height:80%;
+			text-align:center;
+			color:white;
+			line-height:200px;
+		}
+		#Mainpicture_Customer{
+			border: solid 0px;
+			position: relative;
+			height:70%;
+			top:60px;
+			left:19%;
+			
+		}
+		#bottommenudivbox{
+			border: solid 0px;
+			position: relative;
+			width:1300px;
+			height:300px;
+			left:300px;
+		}
+		.bottommenudiv{
+			background-image:url(img/alibaba.jpg);
+			border: solid 0px;
+			position: relative;
+			float:left;
+			width:200px;
+			margin-left:10px;
+			margin-top:10px;
+			height:130px;
+		}
+		#Friendshiplinksbox{
+			border: solid 0px;
+			position: relative;
+			left:300px;
+			margin-top:0px;
+			width:80%;
+			background-color:#F5F5F5;
+			color:#A3A3A3;
+		}
+		.Friendshiplinks{
+			border: solid 0px;
+			position: relative;
+			float:left;
+			margin-left:10px;
+			margin-top:10px;
+			background-color:#F5F5F5;
+		}
+		#bottomAuthentication_box{
+			border: solid 0px;
+			position: relative;
+			left:100px;
+			margin-left:400px;
+			color:#515151;
+		}
+		.bottomAuthentication_div{
+			border: solid 0px;
+			position: relative;
+			margin-left:10px;
+			width:280px;
+			float:left;
+			height:120px;
+		}
+		.bottomAuthentication_cion{
+			border: solid 0px;
+			position: absolute;
+			width:80px;
+			height:80px;
+			margin-top:20px;
+			margin-left:10px;
+		}
+		.bottomAuthentication_title{
+			border: solid 0px;
+			position: absolute;
+			width:80px;
+			height:40px;
+			margin-top:20px;
+			margin-left:100px;
+		}
+		.bottomAuthentication_con{
+			border: solid 0px;
+			position: relative;
+			width:180px;
+			height:20px;
+			margin-top:80px;
+			margin-left:100px;
+		}
+		.Qualificationssmalldiv{
+			position: relative;
+			float:left;
+			top:-20px;
+			cursor:pointer;
+		}
+	</style>
+	<body>
+		<div id="mian">
+			<div class="header">
+				<div style="margin-left: 200px; position: relative;top:5px;">
+					<div class="header_leftdiv">欢迎来到宗信财务！</div>
+					<div class="header_leftdiv"><img src="22"></div>
+					<div class="header_leftdiv"><img src="22"></div>
+				    <div class="header_leftdiv"><img src="22">移动应用﹀</div>
+				</div>
+				<div style="margin-left: 1300px;position: relative;top:5px;">
+					<div class="header_rightdiv" style="width:80px"><img src="img/cion5.png"width="10px">登录</div>
+					<div class="header_rightdiv">首页</div>
+					<div class="header_rightdiv">收藏</div>
+				    <div class="header_rightdiv">联系我们</div>
+				</div>
+			</div>
+			<div id="Qualifications">
+				<div style="position:relative;left:250px"><h1>LOGO</h1></div>
+				<div style="position:relative;left:1200px;">
+						<div class="Qualificationssmalldiv">认证 </div>
+						<div class="Qualificationssmalldiv"style="margin-left:10px">支付安全 </div>
+						<div class="Qualificationssmalldiv"style="margin-left:10px">专人服务 </div>
+						<div class="Qualificationssmalldiv"style="margin-left:10px">售后</div>
+				</div>
+			</div>
+			<div id="menu">
+				<div style="margin-left: 12%;">
+						<div class="dorp" style="width: 200px;background-color: #34B3E0;color: white;" >
+							<span>全部服务分类</span> 
+								<div id="Mainmenu">
+									<div id="Submenubox">
+										<div class="Submenu">公司注册、公司变更、办资质 </div>
+										<div class="Submenu">代理记账、审计税务代办 </div>
+										<div class="Submenu">公司注册、公司变更、办资质 </div>
+										<div class="Submenu">代理记账、审计税务代办 </div>
+										<div class="Submenu">公司注册、公司变更、办资质 </div>
+									</div>
+								</div>
+						</div>
+						<div class="dorp">
+							<span>首页</span> 
+						</div>
+						<div class="dorp">
+							<span>公司注册</span> 
+						</div>
+						<div class="dorp">
+							<span>财税代理</span> 
+						</div>
+						<div class="dorp">
+							<span>政府批文</span> 
+						</div>
+						<div class="dorp">
+							<span>食品卫生</span> 
+						</div>
+						<div class="dorp">
+							<span>商标专利</span> 
+						</div>
+						<div class="dorp">
+							<span>工作签证</span> 
+						</div>
+						<div class="dorp">
+							<span>关于我们</span> 
+						</div>
+				</div>
+			</div>
+			<div style="height: 400px;width: 1885px;">
+				<img  src="img/timg.jpg"/>
+			</div>
+			<div class="Mainpicture" style="background-color: #F5F5F5;">
+					<h3 style="position: relative;color:#575757;text-align: center; top:30px;font-size: 25px;">我们的服务</h3>
+				<div id="Mainpicturebox">
+					<div class="service">
+						<div class="servicecontent_cion"><center><img width="50px" style="margin-top: 10px;" src="img/cion1.png"/></center></div>
+						<div class="servicecontent_title">公司注册</div>
+						<div class="servicecontent_describe">线上提交材料</div>
+						<div class="servicecontent_button">查看详情</div>
+						<div class="servicecontent_number">已有<span style="color:#FD5A66">10000+</span>个企业选择</div>
+					</div>
+					<div class="service">
+						<div class="servicecontent_cion"><center><img width="50px" style="margin-top: 10px;" src="img/cion2.png"/></center></div>
+						<div class="servicecontent_title">财税服务</div>
+						<div class="servicecontent_describe">从业三年以 上会计师</div>
+						<div class="servicecontent_button">查看详情</div>
+						<div class="servicecontent_number">已有<span style="color:#FD5A66">10000+</span>个企业选择</div>
+					</div>
+					<div class="service">
+						<div class="servicecontent_cion"><center><img width="50px" style="margin-top: 10px;" src="img/cion3.png"/></center></div>
+						<div class="servicecontent_title">专项审批</div>
+						<div class="servicecontent_describe">专项审批更专业</div>
+						<div class="servicecontent_button">查看详情</div>
+						<div class="servicecontent_number">已有<span style="color:#FD5A66">10000+</span>个企业选择</div>
+					</div>
+					<div class="service">
+						<div class="servicecontent_cion"><center><img width="50px" style="margin-top: 10px;" src="img/cion4.png"/></center></div>
+						<div class="servicecontent_title">商标注册</div>
+						<div class="servicecontent_describe">24小时内提交申请 </div>
+						<div class="servicecontent_button">查看详情</div>
+						<div class="servicecontent_number">已有<span style="color:#FD5A66">10000+</span>个企业选择</div>
+					</div>
+					<div class="service">
+						<div class="servicecontent_cion"><center><img width="50px" style="margin-top: 10px;" src="img/cion5.png"/></center></div>
+						<div class="servicecontent_title">一般税人</div>
+						<div class="servicecontent_describe">纳税资格提交申请.</div>
+						<div class="servicecontent_button">查看详情</div>
+						<div class="servicecontent_number">已有<span style="color:#FD5A66">10000+</span>个企业选择</div>
+					</div>
+				</div>
+			</div>
+			<div class="Mainpicture">
+			<h3 style="position: relative;color:#575757;text-align: center; top:30px;font-size: 25px;">行业资讯</h3>
+				<div id="Industryinformationbox">
+					<div class="Industryinformation">
+						<div class="Industryinformation_cion"><img width="254.5px" height="100%"src="img/hy.jpg"/></div>
+						<div class="Industryinformation_title"><center>标题</center></div>
+						<div class="Industryinformation_datecion"><img width="100%" height="100%"src="img/日历.png"/></div>
+						<div class="Industryinformation_date">2016-2-27</div>
+						<div class="Industryinformation_number"></div>
+						<div class="Industryinformation_more">MORE+</div>
+					</div>
+					<div class="Industryinformation">
+						<div class="Industryinformation_cion"><img width="254.5px" height="100%"src="img/hy.jpg"/></div>
+						<div class="Industryinformation_title"><center>标题</center></div>
+						<div class="Industryinformation_datecion"><img width="100%" height="100%"src="img/日历.png"/></div>
+						<div class="Industryinformation_date">2016-2-27</div>
+						<div class="Industryinformation_number"></div>
+						<div class="Industryinformation_more">MORE+</div>
+					</div>
+					<div class="Industryinformation">
+						<div class="Industryinformation_cion"><img width="254.5px" height="100%"src="img/hy.jpg"/></div>
+						<div class="Industryinformation_title"><center>标题</center></div>
+						<div class="Industryinformation_datecion"><img width="100%" height="100%"src="img/日历.png"/></div>
+						<div class="Industryinformation_date">2016-2-27</div>
+						<div class="Industryinformation_number"></div>
+						<div class="Industryinformation_more">MORE+</div>
+					</div>
+					<div class="Industryinformation">
+						<div class="Industryinformation_cion"><img width="254.5px" height="100%"src="img/hy.jpg"/></div>
+						<div class="Industryinformation_title"><center>标题</center></div>
+						<div class="Industryinformation_datecion"><img width="100%" height="100%"src="img/日历.png"/></div>
+						<div class="Industryinformation_date">2016-2-27</div>
+						<div class="Industryinformation_number"></div>
+						<div class="Industryinformation_more">MORE+</div>
+					</div>
+				</div>
+			</div>
+			<div class="Mainpicture"  style="background-color:#F5F5F5;">
+			<h3 style="position: relative;color:#575757;text-align: center; top:30px;font-size: 25px;">公司流程</h3>
+				<div class="prev_btn1" id="prev_btn1" ><img src="img/feel3.png" width="20" height="40"  /></div>
+					<div class="ban" id="demo1" style="border: solid 0px;position:relative;top:20px">
+							
+								<div id="min_pic">
+									
+									
+									<div class="num clearfix" id="ban_num1">
+										<ul>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤1</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤2</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤3</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤4</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤5</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤6</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤7</center><br>与客户治城签订注册确认单</span></div></li>
+											<li><div class="ban_div"><img class="img" src="img/timg.jpg" width="200" height="200" style="border-radius:100px" /><span class="imgwrite"><center>步骤8</center><br>与客户治城签订注册确认单</span></div></li>
+									</div>
+									
+								</div>
+								
+					</div>
+					<div class="next_btn1" id="next_btn1"><img src="img/feel4.png" width="20" height="40"  /></div>
+			
+			</div>
+			<div class="Mainpicture">
+					<div id="app">
+							<template>
+									  <div class="block">
+									    <span class="demonstration"></span>
+									    <el-carousel height="400px">
+									      <el-carousel-item v-for="item in 1" :key="item">
+									          
+									        <img src="img/dog1.jpg" />
+									      </el-carousel-item>
+									      <el-carousel-item v-for="item in 1" :key="item">
+									        <img src="img/dog2.jpg" />
+									      </el-carousel-item>
+									      <el-carousel-item v-for="item in 1" :key="item">
+									        <img src="img/dog3.jpg" />
+									      </el-carousel-item>
+									    </el-carousel>
+									  </div>
+							</template>
+					</div>
+			</div>
+			<div class="Mainpicture">
+			<h3 style="position: relative;color:#575757;text-align: center; top:30px;font-size: 25px;">客户新声</h3>
+				<div id="Mainpicture_Customer">
+					<div class="Customersatisfaction">
+					<h2> 博大斌 | 总经理</h2>
+					</div>
+					<div class="Customersatisfaction">
+					<h2> 博大斌 | 总经理</h2>
+					</div>
+					<div class="Customersatisfaction">
+					<h2> 博大斌 | 总经理</h2>
+					</div>
+				</div>
+				<div class="servicecontent_button" style="position:relative;top:20px;left:47%;background-color:white;border-weight:1px;border-color:#E1E1E1;color:#E1E1E1">查看更多</div>
+			</div>
+			<div id="bottomQualifications">
+				<h3 style="position: relative;color:#575757;text-align: center; top:30px;font-size: 25px;">合作伙伴</h3>
+			</div>
+			<div id="bottommenu">
+				<div id="bottommenudivbox">
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					<div class="bottommenudiv"><img src="img/tengxun.jpg"  /> </div>
+					
+				</div>
+			</div>
+			<div id="Friendshiplinks">
+				<div id="Friendshiplinksbox">
+					<div><h3>友情链接</h3></div>
+					<div class="Friendshiplinks div" style="margin-left:0px">综信大型工商财税</div>
+					<div class="Friendshiplinks div">深圳业信会计师事务所</div>
+					<div class="Friendshiplinks div">综信国际商务有限公司</div>
+					<div class="Friendshiplinks div">深圳财富咨询公司</div>
+					<div class="Friendshiplinks div">深圳前海综信会计代理有限公司</div>
+					<div class="Friendshiplinks div">深圳业信会计师事务所</div>
+				</div>
+			</div>
+			<div id="bottomAuthentication">
+				  <div id="bottomAuthentication_box">
+						<div class="bottomAuthentication_div">
+							<div class="bottomAuthentication_cion"><img width="80px" src="img/资质.png"/></div>
+							<div class="bottomAuthentication_title"><h3>资质认证</h3></div>
+							<div class="bottomAuthentication_con">服务商100%实名审核认证</div>
+						</div>
+						<div class="bottomAuthentication_div">
+							<div class="bottomAuthentication_cion"><img width="80px" src="img/资质.png"/></div>
+							<div class="bottomAuthentication_title"><h3>资质认证</h3></div>
+							<div class="bottomAuthentication_con">服务商100%实名审核认证</div>
+						</div>
+						<div class="bottomAuthentication_div">
+							<div class="bottomAuthentication_cion"><img width="80px" src="img/资质.png"/></div>
+							<div class="bottomAuthentication_title"><h3>资质认证</h3></div>
+							<div class="bottomAuthentication_con">服务商100%实名审核认证</div>
+						</div>
+				  </div>
+				 
+			</div>
+			<div id="bottom">
+					<div class="bottomleft_box">
+								<div id="bottomleft_div">
+												<div class="bottomleftbig">
+														<div class="bottomleftsmall"><center><h3>关于综信财务</h3></center></div>
+														<div class="bottomleftsmall"><center>了解我们</center></div>
+														<div class="bottomleftsmall"><center>品牌故事</center></div>
+														<div class="bottomleftsmall"><center>加入我们</center></div>
+														<div class="bottomleftsmall"><center>联系我们</center></div>
+												</div>
+												<div class="bottomleftbig">
+														<div class="bottomleftsmall"><center><h3>关于综信财务</h3></center></div>
+														<div class="bottomleftsmall"><center>了解我们</center></div>
+														<div class="bottomleftsmall"><center>品牌故事</center></div>
+														<div class="bottomleftsmall"><center>加入我们</center></div>
+														<div class="bottomleftsmall"><center>联系我们</center></div>
+												</div>
+												<div class="bottomleftbig">
+														<div class="bottomleftsmall"><center><h3>关于综信财务</h3></center></div>
+														<div class="bottomleftsmall"><center>了解我们</center></div>
+														<div class="bottomleftsmall"><center>品牌故事</center></div>
+														<div class="bottomleftsmall"><center>加入我们</center></div>
+														<div class="bottomleftsmall"><center>联系我们</center></div>
+												</div>
+												<div class="bottomleftbig" style="border-left:1px solid #333;height:220px;width:30px"></div>
+												<div class="bottomleftbig" style="margin-top:10px;width:200px;height:200px;background-color:#56B0EF"></div>
+												<div class="bottomleftbig" style="margin-top:100px;">扫码关注我呦<br>关注综信财富</div>
+												<div class="bottomleftbig" style="margin-left:-100px;width:400px;height:200px;border:1px solid"></div>
+				 				</div>
+				    </div>
+			</div>
+			<div class="header">
+				
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		#bottomleft_div{
+			position:relative;
+			left:300px;
+			top:60px;
+		}
+		.bottomleftbig{
+			position:relative;
+			float:left;
+			border:solid 0px;
+			width:200px;
+		}
+		.bottomleftsmall{
+			font-align:center;
+			border:solid 0px;
+			width:150px;
+			height:30px;
+			margin-top:10px;
+			margin-left:20px;
+			
+		}
+	</style>
+	
+<script>
+jq(function(){
+	jq('#demo1').banqh({
+		box:"#demo1",//总框架
+		pnum:"#ban_num1",//小图框架
+		prev_btn:"#prev_btn1",//小图左箭头
+		next_btn:"#next_btn1",//小图右箭头
+		pop_prev:"#prev2",//弹出框左箭头
+		pop_next:"#next2",//弹出框右箭头
+		pop_div:"#demo2",//弹出框框架
+		pop_pic:"#ban_pic2",//弹出框图片框架
+		pop_xx:".pop_up_xx",//关闭弹出框按钮
+		mhc:".mhc",//朦灰层
+		autoplay:false,//是否自动播放
+		interTime:5000,//图片自动切换间隔
+		delayTime:400,//切换一张图片时间
+		pop_delayTime:400,//弹出框切换一张图片时间
+		mindire:true,//小图滚动方向（true为水平方向滚动）
+		min_picnum:5,//小图显示数量
+	})
+})
+</script>
+<style>
+	
+  @import url("../css/index.css");
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+
+</style>
+<script>new Vue().$mount('#app')</script>
+</html>
